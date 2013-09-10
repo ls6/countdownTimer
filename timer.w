@@ -323,7 +323,6 @@ checkIfMissingFont
 
 \begin{enumerate}
 \item Entering custom time greater than 7 minutes with a number starting with \texttt{0} causes an error. So, '\texttt{007}' works fine but '\texttt{008}' does not.
-\item Pause with a 'space' button
 \end{enumerate}
 
 \end{document}
