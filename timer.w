@@ -100,7 +100,7 @@ proc makeGUI {} {
 The top part of the application window will show the time inside a \texttt{.f\_time} frame. As we have already said, we are going to place there labels bound to global variables defined in Section \ref{sec:fundamentals}.
 
 @d theGUI @{
-    pack [frame .f_time -padx 50] -side top
+    pack [frame .f_time -padx 50] -side top -expand 1
     pack [label .f_time.l_timeLeftHours -font FCounterSmall\
           -padx 0 -textvariable hoursLeft\
          ] -side left -anchor ne -ipady 40

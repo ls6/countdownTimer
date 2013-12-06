@@ -27,7 +27,7 @@ proc makeGUI {} {
     font create FCounter -size 240 -family $::fontFamily
     font create FCounterSmall -size 36 -family $::fontFamily
 
-    pack [frame .f_time -padx 50] -side top
+    pack [frame .f_time -padx 50] -side top -expand 1
     pack [label .f_time.l_timeLeftHours -font FCounterSmall\
           -padx 0 -textvariable hoursLeft\
          ] -side left -anchor ne -ipady 40
