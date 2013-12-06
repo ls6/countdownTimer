@@ -186,12 +186,13 @@ Otherwise and if the entered character is a digit we are going to display the ``
 }
 @}
 
-The procedure of starting the custom timer is a little different from the procedure starting the predefined countdowns---it needs to get the time from the custom time entry. We are not going to check if this value is correct---that has been already taken care of by the validation procedure.
+The procedure of starting the custom timer is a little different from the procedure starting the predefined countdowns---it needs to get the time from the custom time entry. We are not going to check if this value is correct---that has been already taken care of by the validation procedure. We are going to remove potential leading \texttt{0}'s, so Tcl interpreter will not interpret this value as an octal number.
 
 @d customTimeWidgets @{
 proc startCustomTimer {} {
     focus .
     set customTime [.f_buttons.f_customTime.e_customTime get]
+	regexp {^0*(\d+)$} $customTime _dummy customTime
     startTimer $customTime
 }
 

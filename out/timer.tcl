@@ -92,6 +92,7 @@ proc validateCustomTime {char value} {
 proc startCustomTimer {} {
     focus .
     set customTime [.f_buttons.f_customTime.e_customTime get]
+    regexp {^0*(\d+)$} $customTime _dummy customTime
     startTimer $customTime
 }
 
